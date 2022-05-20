@@ -1,0 +1,47 @@
+services:
+- source: /runtime/services/tables.yml
+  client_config: {}
+  server_config: {auto_create_missing_columns: false}
+startup: {type: form, module: MainPage}
+package_name: EDF5838_Assignment_2
+allow_embedding: false
+name: EDF5838 Assignment 2
+runtime_options: {version: 2, client_version: '3', server_version: python3-sandbox,
+  server_spec: null}
+metadata: {}
+db_schema:
+  unit_3_4_summary:
+    title: Unit 3&4 Summary
+    client: full
+    server: full
+    columns:
+    - name: code
+      admin_ui: {width: 200}
+      type: string
+    - name: topic
+      admin_ui: {width: 200}
+      type: string
+    - name: keyKnowledge
+      admin_ui: {width: 200}
+      type: string
+    - name: keySkills
+      admin_ui: {width: 200}
+      type: string
+    - name: keyKnowledgeList
+      admin_ui: {width: 200}
+      type: simpleObject
+    - name: keySkillsList
+      admin_ui: {width: 200}
+      type: simpleObject
+  flashcards:
+    title: Flashcards
+    client: none
+    server: full
+    columns:
+    - name: Word
+      admin_ui: {width: 200}
+      type: string
+    - name: Definition
+      admin_ui: {width: 200}
+      type: string
+renamed: true

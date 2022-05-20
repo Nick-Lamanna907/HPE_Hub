@@ -1,0 +1,142 @@
+is_package: true
+container:
+  type: HtmlTemplate
+  properties: {html: '@theme:standard-page.html'}
+  event_bindings: {}
+components:
+- type: ColumnPanel
+  properties: {col_widths: '{}'}
+  name: content_panel
+  layout_properties: {slot: default}
+  components:
+  - type: YouTubeVideo
+    properties: {role: null, loop: false, height: 498, autoplay: false, mute: false,
+      border: '', foreground: '', visible: true, youtube_id: zSkFFW--Ma0, spacing_above: small,
+      duration: 0, spacing_below: small, state: UNKNOWN, volume: 0, current_time: 0,
+      background: ''}
+    name: ytMain
+    layout_properties: {grid_position: 'IIIPQI,GBFHMG'}
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+      visible: true, text: 'Choose an area of focus:', font_size: 16, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+      underline: false, icon: ''}
+    name: label_1
+    layout_properties: {grid_position: 'FHNGGM,YPIYLF'}
+  - type: DropDown
+    properties:
+      role: null
+      align: full
+      tooltip: ''
+      placeholder: ''
+      border: ''
+      enabled: true
+      foreground: ''
+      items: [Focus, Stress Relief, Energy Boost, Sleep, Speedy Stress Relief, '']
+      visible: true
+      font_size: null
+      font: ''
+      spacing_above: small
+      spacing_below: small
+      italic: false
+      background: ''
+      bold: false
+      underline: false
+      include_placeholder: false
+    name: ddVideos
+    layout_properties: {grid_position: 'FHNGGM,KURDWE'}
+    event_bindings: {change: ddVideos_change}
+  - type: Spacer
+    properties: {height: 32}
+    name: spacer_1
+    layout_properties: {grid_position: 'RLMCGU,UOIOEC'}
+  - type: Label
+    properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+      visible: true, text: Headspace Support, font_size: 16, font: '', spacing_above: small,
+      icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+      underline: false, icon: ''}
+    name: label_2
+    layout_properties: {grid_position: 'JENWVA,AWZNMP'}
+  - type: Link
+    properties: {role: null, url: 'https://headspace.org.au/online-and-phone-support/interactive-tools/activities/procrastination/',
+      align: left, tooltip: '', border: '', foreground: '', visible: true, text: '',
+      font_size: null, wrap_on: mobile, font: '', col_spacing: medium, spacing_above: small,
+      icon_align: left, col_widths: '{}', spacing_below: small, italic: false, background: '',
+      bold: false, underline: false, icon: ''}
+    name: lProcrastination
+    layout_properties: {grid_position: 'LSEPVW,EBZBLL'}
+    components:
+    - type: ColumnPanel
+      properties: {col_widths: '{}'}
+      name: column_panel_1
+      layout_properties: {grid_position: 'FZBPZD,GDSYFW'}
+      components:
+      - type: Button
+        properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
+          foreground: '#EEEEEE', visible: true, text: Procrastination, font_size: 16,
+          font: '', spacing_above: small, icon_align: left, spacing_below: small,
+          italic: false, background: '#FF7750', bold: false, underline: false, icon: ''}
+        name: btnHHProcrastination
+        layout_properties: {grid_position: 'EGDACK,WQUDVX', full_width_row: true}
+        event_bindings: {}
+  - type: Link
+    properties: {role: null, url: 'https://headspace.org.au/online-and-phone-support/interactive-tools/activities/sleep/',
+      align: left, tooltip: '', border: '', foreground: '', visible: true, text: '',
+      font_size: null, wrap_on: mobile, font: '', col_spacing: medium, spacing_above: small,
+      icon_align: left, col_widths: '{}', spacing_below: small, italic: false, background: '',
+      bold: false, underline: false, icon: ''}
+    name: lSleep
+    layout_properties: {grid_position: 'LSEPVW,WXKPEH'}
+    components:
+    - type: ColumnPanel
+      properties: {col_widths: '{}'}
+      name: column_panel_2
+      layout_properties: {grid_position: 'IZGTOT,ODYZVU'}
+      components:
+      - type: Button
+        properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
+          foreground: '#EEEEEE', visible: true, text: Sleep, font_size: 16, font: '',
+          spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+          background: '#FF7750', bold: false, underline: false, icon: ''}
+        name: btnHHSleep
+        layout_properties: {grid_position: 'YTBTVC,JAMYUL', full_width_row: true}
+  - type: Link
+    properties: {role: null, url: 'https://headspace.org.au/online-and-phone-support/interactive-tools/activities/mindfulness/',
+      align: left, tooltip: '', border: '', foreground: '', visible: true, text: '',
+      font_size: null, wrap_on: mobile, font: '', col_spacing: medium, spacing_above: small,
+      icon_align: left, col_widths: '{}', spacing_below: small, italic: false, background: '',
+      bold: false, underline: false, icon: ''}
+    name: lMindfulness
+    layout_properties: {grid_position: 'LSEPVW,EMLCTQ'}
+    components:
+    - type: ColumnPanel
+      properties: {col_widths: '{}'}
+      name: column_panel_3
+      layout_properties: {grid_position: 'XVAYVJ,KMXAIP'}
+      components:
+      - type: Button
+        properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
+          foreground: '#EEEEEE', visible: true, text: Mindfulness, font_size: 16,
+          font: '', spacing_above: small, icon_align: left, spacing_below: small,
+          italic: false, background: '#FF7750', bold: false, underline: false, icon: ''}
+        name: btnHHMidnfullness
+        layout_properties: {grid_position: 'IWVKFA,ILVNFN', full_width_row: true}
+  - type: Button
+    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+      foreground: 'theme:Gray 800', visible: true, text: home, font_size: null, font: '',
+      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: 'theme:Gray 200', bold: false, underline: false, icon: ''}
+    name: btnBack
+    layout_properties: {grid_position: 'EXHWBX,HVFHPE'}
+    event_bindings: {click: btnBack_click}
+- type: FlowPanel
+  properties: {}
+  name: navbar_links
+  layout_properties: {slot: nav-right}
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: Mindfulness, font_size: null, font: '', spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: false, underline: false,
+    icon: ''}
+  name: lblMindfulnessHeading
+  layout_properties: {slot: title}

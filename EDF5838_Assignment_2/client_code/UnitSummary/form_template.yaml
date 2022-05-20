@@ -1,0 +1,87 @@
+is_package: true
+container:
+  type: HtmlTemplate
+  properties: {html: '@theme:standard-page.html'}
+components:
+- type: ColumnPanel
+  properties: {col_widths: '{}'}
+  name: content_panel
+  layout_properties: {slot: default}
+  components:
+  - type: Label
+    properties: {role: null, align: left, tooltip: '', border: '', foreground: '#222222',
+      visible: true, text: 'Choose an outcome to get started:', font_size: 16, font: '',
+      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false, icon: ''}
+    name: label_1
+    layout_properties: {grid_position: 'LTYLUV,EMXSYF'}
+  - type: Button
+    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '#EEEEEE', visible: true, text: "Unit 3 \nOutcome 1", font_size: 16,
+      font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '#FF7750', bold: false, underline: false, icon: ''}
+    name: btnU3O1
+    layout_properties: {grid_position: 'QPTCEC,GQOBJG'}
+    event_bindings: {click: btnU3O1_click}
+  - type: Button
+    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '#EEEEEE', visible: true, text: "Unit 3 \nOutcome 2", font_size: 16,
+      font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '#FF7750', bold: false, underline: false, icon: ''}
+    name: btnU3O2
+    layout_properties: {grid_position: 'QPTCEC,PEYJUG'}
+    event_bindings: {click: btnU3O2_click}
+  - type: Button
+    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '#EEEEEE', visible: true, text: "Unit 4 \nOutcome 1", font_size: 16,
+      font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '#FF7750', bold: false, underline: false, icon: ''}
+    name: btnU4O1
+    layout_properties: {grid_position: 'QPTCEC,NSNTGP'}
+    event_bindings: {click: btnU4O1_click}
+  - type: Button
+    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '#EEEEEE', visible: true, text: "Unit 4 \nOutcome 2", font_size: 16,
+      font: '', spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '#FF7750', bold: false, underline: false, icon: ''}
+    name: btnU4O2
+    layout_properties: {grid_position: 'QPTCEC,YVASSA'}
+    event_bindings: {click: btnU4O2_click}
+  - type: Spacer
+    properties: {height: 20}
+    name: spacer_1
+    layout_properties: {grid_position: 'YCMMKF,XIYJUF'}
+  - type: Label
+    properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+      visible: true, text: '', font_size: 18, font: '', spacing_above: small, icon_align: left,
+      spacing_below: small, italic: false, background: '', bold: true, underline: false,
+      icon: ''}
+    name: lblTopicQ
+    layout_properties: {grid_position: 'QXKFBS,WCNYER'}
+  - type: LinearPanel
+    properties: {}
+    name: lpChecklistL
+    layout_properties: {grid_position: 'XYKRHZ,ZPYTOA'}
+  - type: LinearPanel
+    properties: {}
+    name: lpChecklistR
+    layout_properties: {grid_position: 'XYKRHZ,ACOAPM'}
+  - type: Button
+    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+      foreground: 'theme:Gray 800', visible: true, text: home, font_size: null, font: '',
+      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: 'theme:Gray 200', bold: false, underline: false, icon: ''}
+    name: btnBack
+    layout_properties: {grid_position: 'FECLLP,OBUIMY'}
+    event_bindings: {click: btnBack_click}
+- type: FlowPanel
+  properties: {}
+  name: navbar_links
+  layout_properties: {slot: nav-right}
+- type: Label
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: "Unit 3&4 Summary \n", font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+    underline: false, icon: ''}
+  name: lblUnitInfoHeading
+  layout_properties: {slot: title}

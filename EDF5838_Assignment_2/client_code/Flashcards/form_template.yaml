@@ -1,0 +1,59 @@
+is_package: true
+container:
+  type: HtmlTemplate
+  properties: {html: '@theme:standard-page.html'}
+components:
+- type: ColumnPanel
+  properties: {col_widths: '{"XOJDWD":30,"BNKHYW":30}'}
+  name: content_panel
+  layout_properties: {slot: default}
+  components:
+  - type: Label
+    properties: {role: null, align: center, tooltip: '', border: '', foreground: '#555555',
+      visible: true, text: '', font_size: 24, font: '', spacing_above: small, icon_align: left,
+      spacing_below: small, italic: false, background: '#FFD8B2', bold: false, underline: false,
+      icon: ''}
+    name: lblFlashcard
+    layout_properties: {grid_position: 'LJUZVZ,UXOJUG'}
+  - type: Button
+    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '#EEEEEE', visible: true, text: Check!, font_size: null, font: '',
+      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '#FF7750', bold: false, underline: false, icon: ''}
+    name: btnCheck
+    layout_properties: {grid_position: 'ZPPFRO,HJZLYJ'}
+    event_bindings: {click: btnCheck_click}
+  - type: Spacer
+    properties: {height: 55}
+    name: spacer_2
+    layout_properties: {grid_position: 'KXJESV,ZTQEJZ'}
+  - type: TextBox
+    properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: Enter the word here...,
+      border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+      font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false}
+    name: tbWord
+    layout_properties: {grid_position: 'PMYSXE,XOJDWD'}
+  - type: TextBox
+    properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: and the definition here...,
+      border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+      font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+      background: '', bold: false, underline: false}
+    name: tbDef
+    layout_properties: {grid_position: 'PMYSXE,BNKHYW'}
+  - type: Button
+    properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+      foreground: '#EEEEEE', visible: true, text: Add card, font_size: null, font: '',
+      spacing_above: small, icon_align: left, spacing_below: small, italic: false,
+      background: '#FF7750', bold: false, underline: false, icon: ''}
+    name: btnNewPair
+    layout_properties: {grid_position: 'YRWTOG,QHDGPM'}
+    event_bindings: {click: btnNewPair_click}
+- type: FlowPanel
+  properties: {}
+  name: navbar_links
+  layout_properties: {slot: nav-right}
+- type: Label
+  properties: {}
+  name: lblFlashcardsHeading
+  layout_properties: {slot: title}
